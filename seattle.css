@@ -1,0 +1,376 @@
+:root {
+  --side-bar-bg-color: white;
+  --window-border: none;
+  --search-select-bg-color: #575c61;
+  --active-file-bg-color: #f1f4f5;
+  --item-hover-bg-color: #f1f4f5;
+  --item-hover-text-color: black;
+  --control-text-color: #555;
+}
+
+html {
+  font-size: 14pt;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media print {
+  html {
+    font-size: 12pt;
+  }
+}
+
+@font-face {
+  font-family: "Bespoke Serif";
+  src: url("./seattle/BespokeSerif-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bespoke Serif";
+  src: url("./seattle/BespokeSerif-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Bespoke Serif";
+  src: url("./seattle/BespokeSerif-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bespoke Serif";
+  src: url("./seattle/BespokeSerif-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: local("Space Mono Italic"), local("SpaceMono-Italic"),
+    url("./seattle/SpaceMono-Italic.ttf") format("tff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: local("Space Mono"), local("Space Mono Regular"),
+    local("SpaceMono-Regular"),
+    url("./seattle/SpaceMono-Regular.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: local("Space Mono Bold Italic"), local("SpaceMono-BoldItalic"),
+    url("./seattle/SpaceMono-BoldItalic.ttf") format("tff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: local("Space Mono Bold"), local("SpaceMono-Bold"),
+    url("./seattle/SpaceMono-Bold.ttf") format("tff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+#write {
+  font-family: "Bespoke Serif", serif;
+  line-height: 1.5em;
+  padding: 10%;
+  padding-top: 5%;
+}
+
+.file-list-item-summary {
+  height: 36px;
+}
+
+.file-list-item {
+  padding-top: 18px !important;
+  padding-bottom: 18px;
+}
+
+#sidebar-loading-template.file-list-item {
+  padding-top: 0 !important;
+}
+
+a,
+a:visited {
+  color: #e93cac;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+#write h1 {
+  text-align: center;
+}
+
+h3 {
+  font-style: italic;
+}
+
+h4,
+h5,
+h6 {
+  line-height: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+h5 {
+  font-style: italic;
+}
+
+h6 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+h4::after,
+h5::after,
+h6::after {
+  content: ".";
+}
+
+p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  text-align: justify;
+}
+
+p + p {
+  text-indent: 1.5em;
+}
+
+.footnotes {
+  display: list-item;
+  margin-left: 1em;
+  opacity: 1;
+  font-size: 0.8em;
+}
+
+.footnotes-area {
+  color: #333;
+}
+
+.footnotes-area > hr {
+  border: none;
+  margin: 0;
+}
+
+.footnote-line {
+  font-size: 0.8em;
+}
+
+#typora-source {
+  font-family: "Space Mono", monospace;
+  font-size: inherit;
+  --monospace: monospace;
+}
+
+pre,
+code,
+.md-fences {
+  border-radius: 3px;
+  font-family: "Space Mono", monospace !important;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 11pt;
+  background-color: #f8f8f8;
+}
+
+.md-fences {
+  position: relative !important;
+  display: block;
+  page-break-inside: avoid;
+  background: inherit;
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  line-height: 1.4em;
+}
+
+.CodeMirror-linenumber {
+  color: rgb(209, 209, 209);
+}
+
+.CodeMirror-lines {
+  padding-left: 4px;
+}
+
+*.in-text-selection,
+::selection,
+.CodeMirror-selected {
+  background: var(--search-select-bg-color);
+  color: var(--search-select-text-color) !important;
+  text-shadow: none;
+}
+
+a.md-toc-inner {
+  color: var(--text-color);
+}
+
+.cm-s-typora-default .cm-link {
+  color: #e93cac;
+  text-decoration: underline;
+}
+
+.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-property {
+  color: black;
+}
+
+.md-def-name:before,
+.md-def-name:after {
+  color: #2d2d2d;
+}
+
+sup.md-footnote {
+  background-color: initial;
+  color: inherit;
+}
+
+mark {
+  background: #fff387;
+}
+
+td,
+th {
+  border: 1px solid;
+  padding-left: 1ch;
+  padding-right: 1ch;
+}
+
+/*table tr[cid]:first-child > td {
+    border-top: 3px double;
+}*/
+
+th {
+  border-bottom: 0;
+  padding-top: 2px;
+  background: #575c61;
+  border-color: #333;
+  color: #f3f3f3;
+}
+
+pre.md-meta-block {
+  border: 1px solid #a2a9b1;
+  background-color: #f8f9fa;
+  padding: 5px;
+  margin-bottom: 1em;
+}
+
+.task-list-item input:before {
+  content: "\221A";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.6rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #bbb;
+  background-color: inherit;
+}
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before {
+  color: inherit;
+}
+
+.md-task-list-item > input {
+  top: auto;
+  margin-left: -1.1em;
+  font-size: 1.3em;
+  margin-top: 0px;
+  -webkit-appearance: none;
+}
+
+.md-task-list-item input:before {
+  content: "\2610";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.6rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #bbb;
+  background-color: inherit;
+}
+
+.md-task-list-item input:checked:before,
+.md-task-list-item input[checked]:before {
+  color: inherit;
+  content: "\2611";
+}
+
+.task-list-item {
+  padding-left: 1.5em;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 0.25em 24px;
+  position: relative;
+  color: #383838;
+  border-left: 2px solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+blockquote > p + p {
+  text-indent: 0em;
+}
+
+#write > blockquote {
+  padding: 0.25em 30px;
+  margin-left: -32px;
+  width: calc(100% + 32px);
+}
+
+#write > .md-fences-with-lineno {
+  margin-left: auto;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .CodeMirror-sizer {
+    /* Overrides the default declaration that sets left-margin to zero. */
+    margin-left: 35px !important;
+  }
+}
+
+.md-header {
+  font-size: inherit !important;
+}
+
+hr {
+  border-color: lightgray;
+  border-width: 0.5px;
+  border-style: solid;
+}
