@@ -25,7 +25,7 @@ Deinde ad tuum T statisticum Discipulus licebit $\frac{ \bar X - \mu } { S /\sqr
 
 #### Header 4: Take a look at code blocks
 
-Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Sed viverra ipsum nunc aliquet `main()`.  
+Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Sed viverra ipsum nunc aliquet `main()`.
 
 ```dart
 void main() {
@@ -33,7 +33,7 @@ void main() {
 }
 ```
 
-The text size for code blocks is optimized for printing—they are slightly larger and thinner than usual. 
+The text size for code blocks is optimized for printing—they are slightly larger and thinner than usual.
 
 ##### Header 5: Yet another level of heading
 
